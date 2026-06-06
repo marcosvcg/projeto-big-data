@@ -1,0 +1,11 @@
+FROM postgres:16
+
+LABEL maintainer="ibge-metabase"
+LABEL description="PostgreSQL 16 com schema e dados tratados do IBGE pré-carregados"
+
+# Copia o schema SQL e o CSV para o diretório de inicialização automática
+COPY init-db/01_schema.sql       /docker-entrypoint-initdb.d/01_schema.sql
+COPY init-db/dados_ibge_tratados.csv /docker-entrypoint-initdb.d/dados_ibge_tratados.csv
+
+# Garante permissão de leitura para o usuário postgres
+RUN chmod 644 /docker-entrypoint-initdb.d/*
