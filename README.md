@@ -99,7 +99,7 @@ SELECT
 FROM ibge_estados
 ORDER BY densidade_demografica_calculada DESC;
 ```
-A visualização apresenta a densidade demográfica calculada para cada estado brasileiro.
+Gráfico da densidade demográfica calculada para cada estado brasileiro:
 
 ![Densidade Demográfica por Estado](docs/densidade_demografica.png)
 
@@ -115,6 +115,11 @@ FROM ibge_estados
 GROUP BY regiao
 ORDER BY regiao;
 ```
+Gráfico da média de IDH por região do Brasil.
+![Média de IDH por Região](docs/media_idh.png)
+
+Gráfico da média de renda per capita por região do Brasil.
+![Média de Renda Per Capita por Região](docs/media_renda.png)
 
 ### Desafio 3 — Filtragem por Linha de Corte Dinâmica
 
@@ -131,6 +136,8 @@ WHERE veiculos > (
 )
 ORDER BY veiculos DESC;
 ```
+Gráfico dos estados com quantidade de veículos acima da média nacional.
+![Estados com Frota Acima da Média Nacional](docs/frota_acima_media.png)
 
 ### Desafio 4 — Análise de Vulnerabilidade Social
 
@@ -146,6 +153,8 @@ WHERE renda_per_capita < 1500
   AND matriculas > 200000
 ORDER BY renda_per_capita ASC;
 ```
+Tabela dos estados identificados na análise de vulnerabilidade social.
+![Indicadores de Vulnerabilidade Social](docs/vulnerabilidade_social.png)
 
 ---
 
