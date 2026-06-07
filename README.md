@@ -99,6 +99,9 @@ SELECT
 FROM ibge_estados
 ORDER BY densidade_demografica_calculada DESC;
 ```
+A visualização apresenta a densidade demográfica calculada para cada estado brasileiro.
+
+![Densidade Demográfica por Estado](docs/densidade_demografica.png)
 
 ### Desafio 2 — Agregação Macrorregional
 
