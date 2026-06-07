@@ -139,7 +139,7 @@ SELECT
     matriculas,
     idh
 FROM ibge_estados
-WHERE renda_per_capita < 1500
+WHERE (renda_per_capita < 1500 OR idh < 0.700)
   AND matriculas > 200000
 ORDER BY renda_per_capita ASC;
 ```
